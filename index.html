@@ -10,41 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .text-gradient {
-            background: linear-gradient(90deg, #d8b4fe, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-        }
-        .button-gradient {
-            background: linear-gradient(90deg, #a855f7, #ec4899);
+        .hero-bg { background-color: #030712; /* gray-950 */ }
+        .chat-bubble-user { background-color: #14b8a6; /* teal-500 */ color: white; border-radius: 1.5rem 1.5rem 0.5rem 1.5rem; }
+        .chat-bubble-bot { background-color: #f1f5f9; /* slate-100 */ color: #1e293b; /* slate-800 */ border-radius: 1.5rem 1.5rem 1.5rem 0.5rem; }
+        .cta-button {
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.25);
+            box-shadow: 0 4px 6px -1px rgba(20, 184, 166, 0.2), 0 2px 4px -2px rgba(20, 184, 166, 0.1);
         }
-        .button-gradient:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
-        }
-        .glass-card {
-            background: rgba(23, 23, 23, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(20, 184, 166, 0.3), 0 4px 6px -4px rgba(20, 184, 166, 0.2);
         }
     </style>
 </head>
-<body class="bg-black text-slate-300">
+<body class="bg-slate-50 text-slate-700">
 
     <!-- Header & Hero Section -->
-    <header class="bg-black text-white">
-        <div class="container mx-auto px-6 py-24 md:py-40 text-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-gradient">
-                Creamos el Software Inteligente que Necesitas
-            </h1>
-            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-slate-400">Soluciones para agencias de turismo que convierten el caos operativo en un motor de ventas automático. Deja de perder clientes, empieza a ganar eficiencia.</p>
-            <div class="mt-10">
-                <a href="#diagnostico" class="button-gradient text-white font-bold py-4 px-8 rounded-full text-lg">
-                    Empezar mi Diagnóstico
+    <header class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Tu WhatsApp responde, <br class="hidden md:block" /> tú cierras las ventas.</h1>
+            <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-slate-300">Cognito construye sistemas inteligentes para agencias de turismo en Cusco que convierten consultas nocturnas en reservas confirmadas. Deja de ser un operador, vuelve a ser un dueño de negocio.</p>
+            <div class="mt-8">
+                <a href="#diagnostico" class="cta-button bg-teal-500 hover:bg-teal-400 text-white font-bold py-4 px-8 rounded-full text-lg">
+                    Solicita tu Diagnóstico Gratuito
                 </a>
             </div>
         </div>
@@ -54,20 +42,20 @@
 
         <!-- Problem Section -->
         <section class="text-center max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-gradient">¿Tu Crecimiento está Frenado por la Operación?</h2>
-            <p class="mt-6 text-lg text-slate-400">Las consultas repetitivas y los procesos manuales no solo consumen tu tiempo, sino que crean fugas de ingresos y dañan la experiencia de tus clientes.</p>
-            <div class="mt-12 grid md:grid-cols-3 gap-8 text-left">
-                <div class="glass-card p-6 rounded-2xl">
-                    <h3 class="font-bold text-lg text-white">Fugas de Ingresos</h3>
-                    <p class="mt-2 text-slate-400">Cada consulta no respondida en 5 minutos es una venta potencial que se enfría. Estás perdiendo dinero mientras duermes.</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900">¿Te suena familiar?</h2>
+            <p class="mt-4 text-lg text-slate-600">Son las 10 PM. Mientras intentas descansar, tu teléfono no para de sonar. Las mismas preguntas, una y otra vez. Sientes que si no respondes al instante, ese turista europeo reservará con la competencia.</p>
+            <div class="mt-8 grid md:grid-cols-3 gap-8 text-left">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900">⚠️ Fugas de Ingresos</h3>
+                    <p class="mt-2 text-slate-600">Cada consulta no respondida en 5 minutos es una venta potencial que se enfría. Estás perdiendo dinero mientras duermes.</p>
                 </div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <h3 class="font-bold text-lg text-white">Sobrecarga Operativa</h3>
-                    <p class="mt-2 text-slate-400">Dedicas horas a la semana a tareas repetitivas, en lugar de crear experiencias inolvidables para tus clientes.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900">⏱️ Sobrecarga Operativa</h3>
+                    <p class="mt-2 text-slate-600">Dedicas más de 15 horas a la semana a responder preguntas repetitivas, en lugar de crear experiencias inolvidables para tus clientes.</p>
                 </div>
-                <div class="glass-card p-6 rounded-2xl">
-                    <h3 class="font-bold text-lg text-white">Calidad del Servicio</h3>
-                    <p class="mt-2 text-slate-400">Las demoras dañan tu reputación. Los turistas de hoy esperan un servicio instantáneo y profesional.</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900">📉 Calidad del Servicio</h3>
+                    <p class="mt-2 text-slate-600">Las demoras y las respuestas inconsistentes dañan tu reputación. Los turistas de hoy esperan un servicio instantáneo y profesional.</p>
                 </div>
             </div>
         </section>
@@ -75,65 +63,55 @@
         <!-- Solution & Demo Section -->
         <section class="mt-24 md:mt-32">
             <div class="text-center max-w-4xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-bold text-gradient">Experimenta la Solución</h2>
-                <p class="mt-6 text-lg text-slate-400">Este no es un chatbot genérico. Es una simulación de tu futuro agente de ventas, trabajando 24/7. **Pruébalo ahora:**</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Te presentamos el Asistente de Reservas Inteligente</h2>
+                <p class="mt-4 text-lg text-slate-600">Un sistema que construimos para tu agencia y que trabaja 24/7. No es un chatbot genérico, es tu mejor agente de ventas, entrenado para tu negocio. **Pruébalo tú mismo:**</p>
             </div>
 
             <!-- Interactive Demo -->
-            <div class="mt-12 max-w-2xl mx-auto glass-card rounded-2xl shadow-xl p-1 md:p-2">
-                <div class="bg-slate-800/50 text-white p-4 rounded-t-xl flex items-center">
-                    <div class="w-3 h-3 bg-pink-500 rounded-full mr-3"></div>
+            <div class="mt-12 max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-4 md:p-6">
+                <div class="bg-slate-900 text-white p-4 rounded-t-xl flex items-center">
+                    <div class="w-3 h-3 bg-teal-400 rounded-full mr-2"></div>
                     <p class="font-bold">Asistente Virtual de "Aventuras Cusco"</p>
                 </div>
-                <div id="chat-window" class="h-96 overflow-y-auto p-4 space-y-4 bg-black/30">
-                     <div class="p-4 max-w-md break-words bg-slate-800 text-slate-200 rounded-2xl rounded-bl-lg">¡Hola! 👋 Soy el asistente virtual de Aventuras Cusco. ¿Cómo puedo ayudarte hoy?</div>
+                <div id="chat-window" class="h-96 overflow-y-auto p-4 space-y-4">
+                    <!-- Initial Bot Message -->
+                    <div class="chat-bubble-bot p-4 max-w-md">¡Hola! 👋 Soy el asistente virtual de Aventuras Cusco. ¿Cómo puedo ayudarte hoy?</div>
                 </div>
-                <div id="chat-options" class="p-4 border-t border-slate-700/50 space-x-2 text-center flex flex-wrap gap-2 justify-center">
+                <div id="chat-options" class="p-4 border-t border-slate-200 space-x-2 text-center">
                    <!-- Options will be injected here by JS -->
                 </div>
             </div>
         </section>
 
         <!-- "How It Works" & CTA Section -->
-        <section id="diagnostico" class="mt-24 md:mt-32 -mx-6 px-6 py-16 bg-gray-950/50">
+        <section id="diagnostico" class="mt-24 md:mt-32 bg-slate-100 -mx-6 px-6 py-16">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-bold text-gradient">Así Convertimos tus Ideas en Activos Digitales</h2>
-                <p class="mt-6 text-lg text-slate-400">Nuestro proceso de ingeniería está diseñado para entregar resultados tangibles y sistemas que escalan con tu negocio.</p>
-                
-                <div class="mt-12 text-left max-w-2xl mx-auto space-y-8">
-                    <!-- Step 1 -->
-                    <div class="flex items-center gap-6">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full button-gradient flex items-center justify-center font-bold text-xl text-white">01</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-white">Diagnóstico y Estrategia</h3>
-                            <p class="mt-1 text-slate-400">Analizamos tu operación para encontrar los puntos de fricción y diseñar una arquitectura de solución a medida.</p>
-                        </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Transforma tu Agencia en 3 Pasos</h2>
+                <p class="mt-4 text-lg text-slate-600">No vendemos software, entregamos resultados. Nuestro proceso está diseñado para crear una solución a la medida de tu negocio.</p>
+                <div class="mt-12 grid md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="text-teal-500 font-extrabold text-2xl">Paso 1</div>
+                        <h3 class="font-bold text-lg text-slate-900 mt-2">Diagnóstico de Fugas</h3>
+                        <p class="mt-2 text-slate-600">Analizamos tu proceso actual para identificar exactamente dónde pierdes tiempo y dinero. Te entregamos un plan de acción claro y conciso.</p>
                     </div>
-                    <!-- Step 2 -->
-                    <div class="flex items-center gap-6">
-                         <div class="flex-shrink-0 w-12 h-12 rounded-full button-gradient flex items-center justify-center font-bold text-xl text-white">02</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-white">Desarrollo e Integración</h3>
-                            <p class="mt-1 text-slate-400">Construimos tu sistema inteligente, conectando tus herramientas existentes y automatizando flujos de trabajo clave.</p>
-                        </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="text-teal-500 font-extrabold text-2xl">Paso 2</div>
+                        <h3 class="font-bold text-lg text-slate-900 mt-2">Construcción del Sistema</h3>
+                        <p class="mt-2 text-slate-600">Como ingenieros, construimos tu "Asistente de Reservas Inteligente", conectando tus herramientas y automatizando tus flujos de trabajo.</p>
                     </div>
-                    <!-- Step 3 -->
-                    <div class="flex items-center gap-6">
-                         <div class="flex-shrink-0 w-12 h-12 rounded-full button-gradient flex items-center justify-center font-bold text-xl text-white">03</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-white">Lanzamiento y Optimización</h3>
-                            <p class="mt-1 text-slate-400">Implementamos la solución y la monitoreamos para asegurar un rendimiento óptimo y un impacto real en tu negocio.</p>
-                        </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="text-teal-500 font-extrabold text-2xl">Paso 3</div>
+                        <h3 class="font-bold text-lg text-slate-900 mt-2">Lanzamiento y Optimización</h3>
+                        <p class="mt-2 text-slate-600">Lanzamos tu sistema y lo monitoreamos para asegurar que funcione a la perfección, liberándote para que te dediques a lo que más importa: tus clientes.</p>
                     </div>
                 </div>
-
-                <div class="mt-16">
-                    <p class="text-2xl font-semibold text-white">¿Listo para construir el futuro digital de tu empresa?</p>
-                    <p class="mt-3 text-slate-400">Todo empieza con el primer paso. Por tiempo limitado, el "Diagnóstico de Fugas de Turistas" es **GRATUITO** para agencias calificadas.</p>
-                    <a href="https://wa.me/51999999999?text=Hola%20Cognito,%20estoy%20interesado%20en%20el%20Diagnóstico%20Gratuito%20para%20mi%20agencia." target="_blank" class="mt-8 inline-block button-gradient text-white font-bold py-4 px-8 rounded-full text-lg">
+                <div class="mt-12">
+                    <p class="text-xl font-semibold text-slate-800">¿Listo para dejar de perder clientes?</p>
+                    <p class="mt-2 text-slate-600">Todo empieza con un diagnóstico. Por tiempo limitado, estamos ofreciendo el "Diagnóstico de Fugas de Turistas" completamente **GRATIS** a las primeras 5 agencias que califiquen este mes.</p>
+                    <a href="https://wa.me/51999999999?text=Hola%20Cognito,%20estoy%20interesado%20en%20el%20Diagnóstico%20Gratuito%20para%20mi%20agencia." target="_blank" class="mt-6 inline-block cta-button bg-teal-500 hover:bg-teal-400 text-white font-bold py-4 px-8 rounded-full text-lg">
                         Calificar para mi Diagnóstico GRATIS
                     </a>
-                    <p class="mt-4 text-sm text-slate-500">Haz clic para contactarnos por WhatsApp.</p>
+                    <p class="mt-4 text-sm text-slate-500">Haz clic para enviarnos un mensaje por WhatsApp.</p>
                 </div>
             </div>
         </section>
@@ -141,10 +119,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-black border-t border-slate-800/50">
-        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+    <footer class="bg-slate-900 text-slate-400">
+        <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 Cognito. Todos los derechos reservados.</p>
-            <p class="text-sm mt-2">Cusco, Perú</p>
+            <p class="text-sm mt-2">Construyendo el futuro de las agencias de turismo en Cusco, Perú.</p>
         </div>
     </footer>
 
@@ -156,32 +134,32 @@
             start: {
                 bot: "¡Hola! 👋 Soy el asistente virtual de Aventuras Cusco. ¿Cómo puedo ayudarte hoy?",
                 options: [
-                    { text: "Info: Montaña 7 Colores", next: "tourInfo" },
+                    { text: "Info del Tour a Montaña 7 Colores", next: "tourInfo" },
                     { text: "Ver otros tours", next: "otherTours" }
                 ]
             },
             tourInfo: {
                 user: "Quisiera información del Tour a la Montaña de 7 Colores, por favor.",
-                bot: "¡Claro! El tour a la Montaña de 7 Colores es de día completo. Incluye transporte, guía, desayuno y almuerzo. El precio es de S/ 120 por persona. ¿Qué más te gustaría saber?",
+                bot: "¡Claro! Nuestro tour a la Montaña de 7 Colores es de día completo. Incluye transporte, guía, desayuno y almuerzo. El precio es de S/ 120 por persona. ¿Qué más te gustaría saber?",
                 options: [
-                    { text: "¿Cupos para el sábado?", next: "availability" },
+                    { text: "¿Hay cupos para este sábado?", next: "availability" },
                     { text: "Gracias, lo pensaré", next: "end" }
                 ]
             },
             otherTours: {
                 user: "Quisiera ver otros tours.",
-                bot: "Por supuesto. También ofrecemos tours a Machu Picchu, el Valle Sagrado y la Laguna Humantay. ¿Alguno te interesa?",
+                bot: "Por supuesto. También ofrecemos tours a Machu Picchu, el Valle Sagrado y la Laguna Humantay. ¿Alguno de esos te interesa?",
                 options: [
-                     { text: "Info: Montaña 7 Colores", next: "tourInfo" },
+                     { text: "Info del Tour a Montaña 7 Colores", next: "tourInfo" },
                      { text: "No, gracias", next: "end" }
                 ]
             },
             availability: {
                 user: "¿Hay cupos disponibles para este sábado?",
-                bot: "Verificando... ¡Sí! 🎉 Tenemos 5 cupos disponibles para este sábado. ¿Te gustaría reservar?",
+                bot: "Un momento, estoy verificando la disponibilidad... ¡Sí! 🎉 Tenemos 5 cupos disponibles para este sábado. ¿Te gustaría reservar ahora?",
                 options: [
-                    { text: "¡Sí, reservar!", next: "bookNow" },
-                    { text: "Hablar con un agente", next: "human" }
+                    { text: "¡Sí, reservar ahora!", next: "bookNow" },
+                    { text: "Necesito hablar con un humano", next: "human" }
                 ]
             },
             bookNow: {
@@ -193,7 +171,7 @@
             },
             human: {
                 user: "Necesito hablar con un humano.",
-                bot: "Entendido. Un agente se pondrá en contacto contigo en los próximos 5 minutos. Por favor, adelántame tu consulta para poder ayudarte más rápido.",
+                bot: "Entendido. Un agente se pondrá en contacto contigo en los próximos 5 minutos a través de este chat. Por favor, adelántame tu consulta para poder ayudarte más rápido.",
                 options: [
                      { text: "Empezar de nuevo", next: "start" }
                 ]
@@ -209,11 +187,7 @@
 
         function addMessage(text, sender) {
             const bubble = document.createElement('div');
-            const bubbleClasses = {
-                user: 'bg-purple-600 text-white rounded-2xl rounded-br-lg ml-auto',
-                bot: 'bg-slate-800 text-slate-200 rounded-2xl rounded-bl-lg'
-            };
-            bubble.className = `p-4 max-w-md break-words ${bubbleClasses[sender]}`;
+            bubble.className = `p-4 max-w-md break-words ${sender === 'user' ? 'chat-bubble-user ml-auto' : 'chat-bubble-bot'}`;
             bubble.textContent = text;
             chatWindow.appendChild(bubble);
             chatWindow.scrollTop = chatWindow.scrollHeight;
@@ -223,7 +197,7 @@
             chatOptions.innerHTML = '';
             options.forEach(option => {
                 const button = document.createElement('button');
-                button.className = "bg-slate-700/50 border border-slate-600 text-slate-300 text-sm font-semibold py-2 px-4 rounded-full hover:bg-slate-600/50 hover:border-slate-500 transition-colors";
+                button.className = "bg-teal-100 text-teal-800 text-sm font-semibold py-2 px-4 rounded-full hover:bg-teal-200 transition-colors";
                 button.textContent = option.text;
                 button.onclick = () => handleOptionClick(option.next);
                 chatOptions.appendChild(button);
@@ -233,30 +207,19 @@
         function handleOptionClick(nextNodeKey) {
             const node = chatFlow[nextNodeKey];
             if (!node) return;
-            
-            chatOptions.innerHTML = '<p class="text-slate-500 text-sm">El asistente está escribiendo...</p>';
-
 
             if(node.user) {
-                setTimeout(() => {
-                    addMessage(node.user, 'user');
-                    setTimeout(() => {
-                        addMessage(node.bot, 'bot');
-                        showOptions(node.options);
-                    }, 1000); 
-                }, 200);
-            } else {
-                 setTimeout(() => {
-                    addMessage(node.bot, 'bot');
-                    showOptions(node.options);
-                }, 1000);
+                addMessage(node.user, 'user');
             }
+            
+            setTimeout(() => {
+                addMessage(node.bot, 'bot');
+                showOptions(node.options);
+            }, 800); // Simulate bot thinking time
         }
-        
+
         // Initial Start
-        setTimeout(() => {
-            showOptions(chatFlow.start.options);
-        }, 1200);
+        showOptions(chatFlow.start.options);
 
     </script>
 </body>
